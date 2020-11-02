@@ -21,5 +21,10 @@ xit('renders wrapper without crashing', () => {
 
 it('renders welcome message', () => {
   const { getByText } = render(<App />);
+  expect(getByText('Learn React')).toBeInTheDocument();
+});
+
+it('renders Wendy message', () => {
+  const { getByText } = render(<App />);
   expect(getByText('Wendy')).toBeInTheDocument();
 });
